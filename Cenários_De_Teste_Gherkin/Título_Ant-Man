@@ -1,0 +1,14 @@
+Feature: Verificação de histórias em quadrinhos com o título Ant-Man
+
+Como analista de qualidade, quero ter certeza de que todas as revistas em quadrinhos com o título Ant-Man retornam corretamente. Dessa forma, podemos confirmar que estamos obtendo os dados corretos conforme o esperado.
+
+Cenário: Verificar se todas as revistas em quadrinhos retornadas têm o título Ant-Man
+
+Dado que eu faço uma solicitação GET para o endpoint /v1/public/comics
+E defino o parâmetro title como Ant-Man
+
+Quando obtenho a resposta da API
+O status da resposta deve ser 200
+E todos os quadrinhos retornados devem ter Ant-Man no título
+E o número total de histórias em quadrinhos retornadas deve ser maior que zero
+

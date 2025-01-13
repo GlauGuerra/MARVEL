@@ -1,0 +1,16 @@
+Função: Validar do endpoint de histórias em quadrinhos.
+
+Como um analista de qualidade,
+quero checar se o total de quadrinhos recebidos é igual valor do campo limit.  
+Assim, posso garantir que o sistema está retornando a quantidade certa de registros.
+
+Cenário: Validar se o total de quadrinhos é igual ao campo limit.
+
+DADO que eu faço uma requisição GET para o endpoint /v1/public/comics. 
+E eu coloco o parâmetro limit como 10. 
+QUANDO eu recebo a resposta,
+
+ENTÃO o status deve ser 200.
+E o número de quadrinhos recebidos deve ser igual ao limit.
+E limit deve ser 10.
+E o total de registros recebidos deve ser 10.

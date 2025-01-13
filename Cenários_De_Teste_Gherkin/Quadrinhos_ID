@@ -1,0 +1,13 @@
+Feature: Validação das histórias em quadrinhos por ID
+
+  Como analista de qualidade
+  Quero garantir que ao consultar um quadrinho específico pelo ID
+  O sistema retorne corretamente os detalhes dessa história em quadrinho, incluindo título.
+
+  Cenário: Validar os detalhes das histórias em quadrinhos com o título "Ant-Man"
+    DADO Eu tenho uma lista de IDs de histórias em quadrinhos com o título "Ant-Man"
+    QUANDO Eu fizer uma requisição para o endpoint "/v1/public/comics/{id}" para cada ID da lista
+    ENTÃO Eu devo receber uma resposta com status 200 para cada requisição
+    E O título do quadrinho retornado deve conter "Ant-Man"
+    E A lista de criadores do quadrinho deve ter ao menos um criador
+
